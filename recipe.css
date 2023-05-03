@@ -1,0 +1,102 @@
+
+
+h1{
+
+    text-align: center;
+    font-size: 22pt;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #A4A400;
+    background-color: #F0F0F0;
+    font-family: 'Lucida Sans Unicode', 'Helvetica', 'Arial',sans-serif;
+    padding: 0px; 
+    margin: 0px;
+
+}
+
+h2{
+ 
+    color: #A4A400;
+    background-color: #F0F0F0;
+    font-family: 'Lucida Sans Unicode', 'Helvetica', 'Arial',sans-serif;
+    text-align: left;
+    font-size: 18pt;
+    padding: 0px; 
+    margin: 0px ;
+    
+}
+
+body{
+
+    background-color: white;
+    color: rgb(64,64,64);
+    font-size: 11pt;
+    font-family: 'Georgia', 'Garamond','serif';
+    background-image: url(silverware.jpg);
+    background-repeat:repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+
+}
+
+link{
+
+    color: #A4A400;
+}
+
+a{
+    color: #A4A400;
+}
+
+ingredient-list abbr::before {
+    content: attr(title);
+    position: absolute;
+    z-index: 1;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+  }
+  
+  .ingredient-list abbr:hover::before {
+    display: block;
+    text-decoration: none;
+  }
+
+.deleted{
+
+    text-decoration: line-through;
+}
+
+/* .replacement::before{
+
+    content: " ";
+} */
+  
+.replacement::after{
+
+    content: "pie";
+}
+  
+
+pre {
+    font-family: monospace;
+    white-space: pre-wrap;
+    text-align: justify;
+  }
+  
+
+  
+  ul{
+    list-style-image: url(pie_icon.gif);
+  }
+  
+.comment{
+
+    background-color: rgb(239, 239, 154);
+    font-style: italic;
+
+}
