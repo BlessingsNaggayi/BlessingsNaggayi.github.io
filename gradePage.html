@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrive Grade </title>
+   
+    <link rel="stylesheet" href="grade.css" type="text/css">
+
+</head>
+<body>
+
+    <h1>Retrieve your grade</h1>
+    
+    
+
+     <form action= "http://mumstudents.org/params.php" >
+
+       <div>
+          <label> Name : <input type="text" name="personname" size=" 30"/> </label> <br/>
+          <br>
+
+          <label> StudentID : <input type="text" name="studentid" size="20" /> </label> <br/>
+           <br>
+        
+          <label>Assignment : <select name= "Assignment">
+              <option> Lab 1 Assignment </option> 
+              <option> Lab 2 Assignment </option> 
+              <option> Lab 3 Assignment </option> 
+              <option> Lab 4 Assignment </option> 
+            
+          </select>  </label>
+
+          <br>
+          <br>
+
+         <label><input type="radio" name="cc" value="entry" />Student entry  </label> <br/>
+
+         <br>
+         
+         <b>Confirmation:</b>  <label><input type = "checkbox" name = confirmation> True </label> 
+
+         <label><input type = "checkbox" name = confirmation> False </label><br/>
+
+         <br>
+
+         <input type="submit" value = "Submit"  > 
+
+
+        </div>
+
+     </form>
+    
+</body>
+</html>
