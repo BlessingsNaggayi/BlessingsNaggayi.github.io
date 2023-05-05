@@ -23,5 +23,31 @@ body{
 
 label{
 
-    font-weight: bold;
+    color: black;
 }
+
+input[type="text"]{
+
+    border-style: outset;
+    border-color: rgb(198, 197, 197); 
+
+}
+
+input[type="submit"]{
+
+    background-color: rgb(208, 203, 200);
+    font-size: 8pt;
+    border-color: rgb(198, 197, 197); 
+    
+    
+}
+
+input[type="reset"]{
+
+    background-color: rgb(208, 203, 200);
+    font-size: 8pt;
+    border-color: rgb(198, 197, 197); 
+    
+    
+}
+

@@ -1,9 +1,102 @@
 body{
 
     background-color: azure;
+    padding-left: 1em;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-div{
+
+
+.header img{
+
+    position: relative;;
+    margin: 0;
+
+}
+
+
+#p1{
+    margin-top: 0;
+    padding: 0;
+}
+
+.fieldsetlabel{
     background-color: rgb(225, 210, 245);
+    padding: 10pt; 
+    padding-right: 5pt; 
+    margin-top: 0pt;
+    border-radius:10px;;
+    border-style: outset;
     
+}
+
+legend{
+
+    border: 2px outset grey;
+    background-color: white;
+    padding: 0.2em;
+
+}
+
+a{
+    color: red
+    
+}
+
+
+a.link{
+    text-decoration: none;
+}
+
+
+
+label{
+
+    font-weight: bold;
+    
+
+}
+
+input[type="text"]{
+
+    border-style: outset;
+    border-color: rgb(198, 197, 197); 
+
+
+}
+
+input[type="submit"]{
+
+    background-color: rgb(231, 149, 118);
+    font-weight: bold;
+    border-color: rgb(198, 197, 197); 
+    margin-top: 3%;
+    
+    
+}
+
+.validators{
+    bottom: 0;
+    left: 0;
+   margin-top: 30px;
+}
+
+.boxContent,form{
+
+    border-radius: 10px;
+    overflow: hidden;
+    width: 35em;
+
+
+}
+
+#i1{
+    vertical-align: bottom;
+}
+
+pre{
+
+    font-family: 'Times New Roman', Times, serif;
+    
+
 }

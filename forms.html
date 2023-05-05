@@ -11,61 +11,96 @@
 </head>
 <body>
 
-    <div class="header">
+      <div class="header">
       
-        <img src="" alt="A logo of nerdLuv">
+        <img src="nerdluv.png" alt="A logo of nerdLuv">
+        <p id="p1">where meek geeks meet</p>
 
-    </div>
+      </div>
 
-    <form action="http://mumstudents.org/params.php" >
+      <form action="http://mumstudents.org/params.php" method="post">
 
-      <div>
+        <div class = "boxContent">
+             
+          <div class=" innercontent">
 
-            <fieldset>
 
-              <legend class="f-label"> New User Signup:</legend>
+            <fieldset class="fieldsetlabel">
 
-              <label> Name : <input type="text" name="personname" size=" 30" maxlength="16"/> </label> <br/>
+              <legend> New User Signup:</legend>
 
-              <br>
+              
+
+              <label> Name : <input type="text" name="personname" size="30" maxlength="16"> </label> <br><br>
+
+              
 
               <label for="gender"> Gender </label> 
               <label> <input type="radio" id= "gender"  name="cc" value="female" checked >Female </label>
-              <label><input type="radio" id= "gender"  name="cc" value="male" /> Male  </label> <br/>
+              <label><input type="radio" id= "gender"  name="cc" value="male" > Male  </label><br> <br>
 
-              <label> Age: <input type="text" name="personname" size= "6" maxlength="2"/> </label> <br/>
+              <label> Age: <input type="text" name="personname" size= "6" maxlength="2"> </label><br> <br>
 
-              <label> Personality Type : <input type="text" name="personname" size= "6" maxlength="4"/>  </label>
+               <label> Personality Type : <input type="text" name="personname" size= "6" maxlength="4">  </label>
                <a href="http//www.humanmetrics.com/cgi-win/JTypes2.asp">
                 (Don't know your type?)
                </a>
             
-
-               <label> Favorite OS: <select name= "Assignment">
-                <option selected> Windows </option> 
-                <option>Mac OSX</option> 
-                <option> Linux</option> 
-
-              
-            </select>  </label>
-            
-           
-               
-        
+                <br>
+                <br>
 
 
+                <label> Favorite OS: <select name= "Assignment">
+                 <option selected> Windows </option> 
+                 <option>Mac OSX</option> 
+                 <option> Linux</option> 
+                 </select>  
+                </label>
+
+                 <br>
+                 <br>
 
 
+                <label for="age"> Seeking Age </label> 
+               <label> <input type="text" id= "age"  name="cc" placeholder="min" size = "6" maxlength = "2"> </label> to
+               <label><input type="text" id= "age"  name="cc"  placeholder="max" size = "6" maxlength = "2"> </label> 
 
+               <br>
 
+               <input type = "submit" value="Sign Up">
+                
+                
+                
+            </fieldset>
 
-             </fieldset>
+          </div>
 
 
 
         </div>
 
-  </form>
-    
+      
+        
+      </form>
+
+      <pre>
+    This pages is for single nerds to meet and date each other! Type in your 
+    personal information and wait for the nerdly luv to begin!
+    Thank you for using our site.
+
+    Results and page &copy; Copyright Nerdluv Inc
+      </pre>
+
+      <img id ="i1" src="back.gif" alt="A back arrow">
+      <a href = "index.html" target =_self title=" This takes you to page2">
+        Back to front page
+        </a>
+
+<div class="validators">
+  <a href="https://validator.w3.org/nu/check/referer"><img src="w3c-html.png" alt="Valid HTML5" ></a> 
+  <a href="https://jigsaw.w3.org/css-validator/check/referer"><img src="w3c-css.png" alt="Valid CSS" ></a>
+</div>
+
+
 </body>
 </html>

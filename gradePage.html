@@ -18,37 +18,38 @@
      <form action= "http://mumstudents.org/params.php" >
 
        <div>
-          <label> Name : <input type="text" name="personname" size=" 30"/> </label> <br/>
-          <br>
-
-          <label> StudentID : <input type="text" name="studentid" size="20" /> </label> <br/>
-           <br>
-        
+          <label> Name : <input type="text" name="personname" size="30"> </label><br><br>
+          
+          <label> StudentID : <input type="text" name="studentid" size="20" > </label><br><br>
+           
           <label>Assignment : <select name= "Assignment">
-              <option> Lab 1 Assignment </option> 
-              <option> Lab 2 Assignment </option> 
-              <option> Lab 3 Assignment </option> 
-              <option> Lab 4 Assignment </option> 
+              <option> FPP Assignment </option> 
+              <option> MPP Assignment </option> 
+              <option> WAP Assignment </option> 
+              <option> DBMS Assignment </option> 
             
-          </select>  </label>
+               </select>  
+            </label>
 
-          <br>
-          <br>
+          <br><br>
 
-         <label><input type="radio" name="cc" value="entry" />Student entry  </label> <br/>
+          <label for="entry">Entry: </label>
+           <label><input type="radio" id="entry" name="Student's Entry" value="2019">2019</label>
+           <label><input type="radio" id="entry" name="Student's Entry" value="2020">2020</label>
+           <label><input type="radio" id="entry" name="Student's Entry" value="2021">2021</label><br><br>
 
-         <br>
-         
-         <b>Confirmation:</b>  <label><input type = "checkbox" name = confirmation> True </label> 
+           <label for="confirm"> I confirm that the information belongs to me : </label>
 
-         <label><input type = "checkbox" name = confirmation> False </label><br/>
+           <label>True<input type = "checkbox" id="confirm" name=confirmation></label>
+           <label>False<input type = "checkbox"  name=confirmation></label><br><br>
 
-         <br>
-
-         <input type="submit" value = "Submit"  > 
+           <input type="submit" name="submit">
+            <input type="reset" name="reset"><br><br>
 
 
         </div>
+
+        
 
      </form>
     

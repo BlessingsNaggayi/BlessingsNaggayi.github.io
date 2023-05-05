@@ -9,12 +9,23 @@ body{
 }
 
 
-.header img{
+.header{
     
+    display:flex;
+    background-image: url('bannerbg.png');
+    background-repeat: repeat-x;
     justify-content: center;
-    background-image: url(bannerbg.png);
-    margin: 0 auto;
-    max-width: 100%;
+    top:0;
+    left:0;
+    bottom:0;
+    right: 0;
+
+
+}
+.g{
+    width:100px;
+    height: 5000px;
+
 
 }
  
