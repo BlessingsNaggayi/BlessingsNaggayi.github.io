@@ -1,0 +1,55 @@
+.textbox{
+
+    border: 5px solid blue;
+    padding: 25pt;
+    margin: 10%;
+    display: flex;
+    margin-right: 30%;
+
+}
+
+h1{
+    color: blue;
+    text-align: center;
+}
+
+h2{
+    color: blue;
+    text-align: left;
+}
+
+button{
+
+    width: 200px;
+    margin: 5pt;
+
+}
+
+input[type= "text"]{
+
+    width: 190px;
+    margin: 5pt;
+}
+
+form{
+    justify-self: left;
+    left: 0;
+    top: 50%;
+   
+}
+
+ul{
+    border: 2px solid grey;
+    
+    display: flex;
+    flex-direction: column;
+    
+    width:100px;
+    height: 100px;
+
+    padding-right: 200px;
+
+    margin-right: 200px;
+
+
+}
