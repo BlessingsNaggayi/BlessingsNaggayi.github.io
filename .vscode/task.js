@@ -16,9 +16,9 @@ function saveList(){
 
 function displayTaskList() {
   taskList.innerHTML = '';
-  tasks.forEach(function(task) {
+  tasks.forEach(function(taskInput) {
     const li = document.createElement('li');
-    li.innerHTML = task;
+    li.innerHTML = taskInput;
     taskList.appendChild(li);
   });
 }
@@ -26,7 +26,7 @@ function displayTaskList() {
 displayTaskList();
 
 addTaskButton.addEventListener('click', function() {
-  const task = task.value.trim();
+  const task = taskInput.value.trim();
   if (task) {
     tasks.push(task);
     saveList;
@@ -36,7 +36,7 @@ addTaskButton.addEventListener('click', function() {
 });
 
 clearTasksButton.addEventListener('click', function() {
-  tasks = [];
+  tasks=[];
   localStorage.removeItem('data');
   displayTaskList();
 });
