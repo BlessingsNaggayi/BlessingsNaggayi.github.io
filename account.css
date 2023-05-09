@@ -1,0 +1,16 @@
+.overallContent {
+    border: 2px solid grey;
+    padding: 2%;
+    margin-right: 60%;
+}
+
+button {
+    margin: 2%;
+}
+
+
+
+input[type="text"] {
+
+    margin: 2%;
+}

@@ -1,0 +1,47 @@
+setTimeout(booyah,2000);
+
+booyah is a call back here.It sets a timer of 2 seconds and calls the function after 2 seconds
+
+setTimeout(booyah(),2000)
+
+This calls the booyah "function" and then passes the return value of that function to the setTimeout method
+
+
+alert(x) = 3
+
+alert(y(2,3)) =6
+
+
+let timeoutId1 = setTimeout(booyah,2000);
+
+let timeoutId2 = setTimeout(booyah2(),2000);
+
+ 
+
+
+function booyah1(){
+
+  alert("BOOYAH!");
+
+}
+
+function booyah2(){
+
+  alert("BOOYAH!");
+
+}
+
+
+
+Unobtrusive Javascript 
+
+This is code written where the HTML file has very minimal JavaScript.
+The DOM is used to attach and execute all Javascript functions.
+
+
+Why use unobtrusive JavaScript?
+
+allows separation of website into 3 major categories
+content(HTML),presentation(CSS),behaviour(JavaScript)
+
+

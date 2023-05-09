@@ -32,14 +32,17 @@ function editTextAreaAgain(){
   
     textbox.style.fontWeight ="bold";
 
+    textbox.style.color ="green";
+    textbox.style.textDecoration="underline";
     document.body.style.backgroundImage= "url('http://www.cs.washington.edu/education/courses/190m/CurrentQtr/labs/6/hundred-dollar-bill.jpg')";
     
-     
   }else{
 
     textbox.style.fontWeight ="normal";
-    textbox.style.color ="green";
-    textbox.style.textDecoration="underline";
+    textbox.style.color ="initial";
+    textbox.style.textDecoration="none";
+    document.body.style.backgroundImage= "";
+    
 
   }
 
@@ -90,7 +93,7 @@ button.addEventListener("click",function(){
 
     }
 
-    return MalkovitchWords;
+    console.log(MalkovitchWords);
 
 });
 
@@ -120,12 +123,10 @@ button.addEventListener("click",function(){
                 pigLatinWords.push(pigLatinWord);
 
             }
-
-            
    
         }
 
-        return(pigLatinWords);
+        console.log(pigLatinWords);
 
     });
 
