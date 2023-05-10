@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="ascii.css" type="text/css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 </head>
 
@@ -55,12 +55,12 @@
                 <legend>Size:</legend>
 
                 <select id="size">
-                    <option>Tiny</option>
-                    <option>Small</option>
-                    <option selected>Medium</option>
-                    <option>Large</option>
-                    <option>Extra Larger</option>
-                    <option>XXL</option>
+                    <option value="7pt">Tiny</option>
+                    <option value="10pt">Small</option>
+                    <option value="12pt" selected>Medium</option>
+                    <option value="16pt">Large</option>
+                    <option value="24pt">Extra Larger</option>
+                    <option value="32pt">XXL</option>
 
                 </select>
 
@@ -88,7 +88,15 @@
     <div class="validators">
         <a href="https://validator.w3.org/nu/check/referer"><img src="../w3c-html.png" alt="Valid HTML5"></a> <br>
         <a href="https://jigsaw.w3.org/css-validator/check/referer"><img src="../w3c-css.png" alt="Valid CSS"></a>
+        <a href="https://webster.cs.washington.edu/jslint/?referer"><img
+                src="https://webster.cs.washington.edu/w3c-js.png" alt="Valid JS" /></a>
+
+
     </div>
+    <script src="ascii.js"></script>
+
+    <script src="animation.js"></script>
+
 
 </body>
 

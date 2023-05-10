@@ -1,0 +1,21 @@
+A jQuery function
+The jQuery function is a global function provided by the jQuery library. It isa shorthand notation for accessing and utilizing the jQuery library's functionality. 
+It can accept different types of arguments, such as a selector string, a DOM element, or a function, and performs various operations based on the provided input.
+
+
+A JQuery object
+The jQuery object is a collection of DOM elements that have been selected or created using the jQuery function. It represents a set of elements that can be manipulated, traversed, or filtered using jQuery's methods and properties.
+
+
+$(document).ready(function() {
+  
+  $("div h1").css("background-color", "red");
+  
+});
+
+
+$(document).ready(function() {
+  
+  $("p").append("YES!");
+
+});
