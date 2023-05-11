@@ -31,7 +31,7 @@
 
                 <legend>Play Controls:</legend>
 
-                <button id="startButton">Start</button>
+                <button id="play">Start</button>
 
                 <button id="stopButton">Stop</button>
 
@@ -41,8 +41,13 @@
 
                 <legend>Animation:</legend>
 
-                <select id="animeType">
-                    <option selected>Blank</option>
+                <select name="animation" id="animation-select">
+                    <option value="blanc">BLANK</option>
+                    <option value="custom">CUSTOM</option>
+                    <option value="exercise">EXERCISE</option>
+                    <option value="juggler">JUGGLER</option>
+                    <option value="bike">BIKE</option>
+                    <option value="dive">DIVE</option>
 
                 </select>
 
@@ -54,7 +59,7 @@
 
                 <legend>Size:</legend>
 
-                <select id="size">
+                <select name="size" id="size">
                     <option value="7pt">Tiny</option>
                     <option value="10pt">Small</option>
                     <option value="12pt" selected>Medium</option>
