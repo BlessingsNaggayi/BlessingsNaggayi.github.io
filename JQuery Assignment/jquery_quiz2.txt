@@ -1,0 +1,33 @@
+For the first code fragment,the iteration function, $(e) is used to wrap the DOM element with jQuery and apply the CSS property color: yellow. 
+This fragment is different from the other two because it explicitly uses the e parameter to refer to the current element.
+
+$(this) is used to wrap the DOM element with jQuery in the second fragment, and the CSS property color: yellow is applied. 
+This fragment is equivalent to fragment 3, as both use this to refer to the current element.
+
+
+
+<div>no ul here </div>
+ <div>
+ This does contain a ul.
+ <ul>
+ <li>the first item</li>
+ <li>the second item</li>
+ </ul>
+ </div>
+ <script>
+  $(document).ready(()=>{
+  $("div ul").css("color","blue");
+
+  });
+ </script>
+ </body
+
+
+
+$(document).ready(() => {
+  var divElement = $("<div><h1>JQuery Core</h1></div>");
+  $("body").append(divElement);
+});
+
+ 
+
