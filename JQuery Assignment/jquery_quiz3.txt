@@ -1,0 +1,34 @@
+1. <script>
+    $(document).ready(function() {
+      var firstParagraphText = $("p").first().text();
+      $("p').last().html(firstParagraphText);
+    });
+  </script>
+
+
+ 2. $(document).ready(function() {
+
+    $(".level-2 li").css("background-color","red");  
+
+    });
+
+
+ 3.   $(document).ready(function() {
+
+     $(".third-item").prev().css("background-color","blue");  
+
+     });
+
+
+ 4.  $(document).ready(function() {
+
+     $(".turkey").replaceWith('<li class="mashed"><em>Mashed Potatoes</em></li>');
+
+     });
+
+
+    $(document).ready(function() {
+
+   5. $("span").parent().parent().css("color","green");
+
+       });
