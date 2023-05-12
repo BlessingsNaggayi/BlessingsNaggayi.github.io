@@ -16,7 +16,7 @@ This fragment is equivalent to fragment 3, as both use this to refer to the curr
  </div>
  <script>
   $(document).ready(()=>{
-  $("div ul").css("color","blue");
+  $("div").has("ul").css("color","blue");
 
   });
  </script>
