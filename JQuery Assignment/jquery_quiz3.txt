@@ -27,9 +27,9 @@
      });
 
 
-    $(document).ready(function() {
+  5.  $(document).ready(function() {
 
-   $("span").parent().css("color","green");
+   $("span").parent().css({"color":"green"});
 
    $("span").parent().parent().css("color","green");
        });
