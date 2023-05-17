@@ -1,107 +1,76 @@
-"use sctrict";
+/* global ANIMATIONS */
 
-$(document).ready(function () {
+"use strict";
+window.onload = function () {
+    //let ANIMATIONS = [];
 
-   var animationSelect = $('#animation-select');
-    var textField= $('#animationDisplay');
-    var fontSizeSelect =$('#size');
-    var animation = $('#animation');
-    var startButton =$('#play');
-    var stopButton = $('#stopButton');
-    var Speed = $('#speed');
-    
-   stopButton.prop("disabled", true);
-   animation.change(function (event) { 
-      stopAnimation();
-      setAnimationType();
-    });
+    document.getElementById("fontsize").onchange = function () {
+        document.getElementById("text-area").style.fontSize = document.getElementById("fontsize").value;
 
-   startButton.click(function (event) { 
-      event.preventDefault();
-      stopButton.prop("disabled", false);
-      if ($Speed.prop("checked")){
-          animateSlow(50);
-      } else {
-          animateSlow(250);
-      }
-    });
-   fontSizeSelect.change(function (event) { 
-      //e.preventDefault();
-      setSize();
-    });
-   stopButton.click(function (event) { 
-      event.preventDefault();
-      stopAnimation();
-      $stopButton.prop("disabled", true);
-   });
-   Speed.change(function (event) { 
-      event.preventDefault();
-      stopAnimation();
-      $stopButton.prop("disabled", false);
-      if ($(this).prop("checked")) {
-          animateSlow(50);
-      } else {
-          animateSlow(250);
-      }
-    }); 
+    };
 
-    var intervalID = 0;
-    function stopAnimation() {
-    clearInterval(intervalID);
-    setAnimationType();
+    document.getElementById("animation").onchange = function () {
+        document.getElementById("text-area").value = ANIMATIONS[document.getElementById("animation").value];
+        ;
+    };
+
+    document.getElementById("start").onclick = start;
+    document.getElementById("stop").onclick = stop;
+    document.getElementById("turbo").onclick = turboMode;
+
+};
+
+
+var timer = null;
+var framesCout = 0;
+var animationArrFrames;
+
+function start() {
+    document.getElementById("start").disabled = true;
+    document.getElementById("animation").disabled = true;
+    document.getElementById("stop").disabled = false;
+    animationArrFrames = document.getElementById("text-area").value.split("=====\n");
+    if (timer === null) {
+        if (document.getElementById("turbo").checked) {
+            timer = setInterval(draw, 50);
+        } else {
+            timer = setInterval(draw, 250);
+        }
     }
-    function setText(x, i=0) {
-    textField.text(x[i % x.length]);
+}
+
+function stop() {
+    document.getElementById("start").disabled = false;
+    document.getElementById("animation").disabled = false;
+    document.getElementById("stop").disabled = true;
+    clearInterval(timer);
+    timer = null;
+    document.getElementById("text-area").value = animationArrFrames.join("=====\n");
+    framesCout = 0;
+}
+
+
+function turboMode() {
+    var status = document.getElementById("turbo");
+    if (timer !== null) {
+        if (status.checked) {
+            clearInterval(timer);
+            timer = setInterval(draw, 50);
+        } else {
+            clearInterval(timer);
+            timer = setInterval(draw, 250);
+        }
     }
-    function animateSlow(x = 250){
-  let frames = $textField.text();
-  frames = frames.split("=====\n");
-  i = 0;
-  intervalID = setInterval(() => {
-      setText(frames, i++);
-  }, x);    
-     }
-    function setSize(){
-    let fontSize = $("#size option:selected").val();
-    textField.css("fontSize", fontSize);
-   }
-    function setAnimationType () {
-    let textArea = textField;
-    let animationType = $('#animation option:selected').text();
-     textArea.text(ANIMATIONS[animationType]);
+}
+
+function draw() {
+    var txtArea = document.getElementById("text-area");
+
+    if (framesCout < animationArrFrames.length) {
+        txtArea.value = animationArrFrames[framesCout];
+        framesCout++;
+    } else {
+        txtArea.value = animationArrFrames[0];
+        framesCout = 1;
     }
-
-  });
-
-    
-
-  // $animationSelect.on('change', function() {
-  //   var selectedAnimation = $animationSelect.val();
-  //   $animationInput.val(selectedAnimation);
-  // });
-  
-
-  // $fontSizeSelect.on('change', function() {
-  //   var selectedFontSize = $fontSizeSelect.val();
-  //   $animation.css('font-size', selectedFontSize + 'px');
-  // });
-
-  // $stopButton.prop("disabled", true);
-
-  // $startButton.click(function(){
-    
-  //   $stopButton.prop("disabled", false);
-
-  //   if($('#speed').prop("checked")){
-  //      animateSlow(50);
-  //   }else{
-  //       animateSlow(250);
-  //   }
-
-    
-
-
-
-
-  
-
+}

@@ -1,0 +1,30 @@
+
+div{
+
+    border: 2px solid gray;
+    margin: 5%;
+    font-weight: bold;
+    padding: 2%;
+    justify-content: center;
+    background-color: rgb(243, 220, 220);
+
+}
+
+input[type='text']{
+
+    margin: 2%;
+
+    display: inline;
+
+}
+
+input[type='submit']{
+
+    margin: 10%;
+    font-weight: bold;
+
+}
+
+select{
+    float: left;
+}
