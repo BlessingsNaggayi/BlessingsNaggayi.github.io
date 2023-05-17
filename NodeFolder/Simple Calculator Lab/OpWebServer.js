@@ -2,7 +2,7 @@
 
 const express = require('express');
 const path = require('path');
-
+const port =process.env.PORT || 5000;
 
 const app = express();
 
@@ -39,12 +39,13 @@ app.post('/calculate',(req,res) => {
 
     }
 
-    res.send(result.toString());
+    res.send(`The Answer is: ${result}<br><a href="/">Another calculation</a>`)
+ 
 
     
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log(`Server is running....`);
   });
 
