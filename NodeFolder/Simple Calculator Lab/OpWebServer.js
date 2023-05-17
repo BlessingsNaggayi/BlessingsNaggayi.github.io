@@ -23,16 +23,16 @@ app.post('/calculate',(req,res) => {
     let result;
     switch (operation) {
       case 'Add':
-        result = num1 + num2;
+        result = parseInt(num1) + parseInt(num2);
         break;
       case 'Subtract':
-        result = num1 - num2;
+        result = parseInt(num1) - parseInt(num2);
         break;
       case 'Multiply':
-        result = num1 * num2;
+        result = parseInt(num1) * parseInt(num2);
         break;
       case 'Divide':
-        result = num1 / num2;
+        result = parseInt(num1) / parseInt(num2);
         break;
       default:
         return res.status(400).send('Invalid operation');
