@@ -1,8 +1,8 @@
 div{
-    border: 1px solid darkblue;
+    border: 2px solid rgb(0, 139, 88);
     padding: 7px;
     display: inline-block;
-    background-color: aquamarine;
+    background-color: rgb(218, 245, 236);
 }
 
 h1{

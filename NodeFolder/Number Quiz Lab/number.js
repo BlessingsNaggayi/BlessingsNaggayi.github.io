@@ -1,11 +1,8 @@
 const express = require('express');
-const cookieParser= require('cookie-parser');
-const oneDay = 1000*60*60*24;
 const port =process.env.PORT || 3000;
-
-
 const sessions = require('express-session');
 const app= express();
+
 const questions = [
     "1, 2, 3, 4, 5", // natural number
     "1, 1, 2, 3, 5", //fib
@@ -18,21 +15,20 @@ const answers = [6,8,36,13,32]
 
 app.use(sessions({
     secret: "thisismykey",
-    cookie: { maxAge : oneDay},
     resave:false,
     saveUninitialized: true
 }));
 
 app.use(express.urlencoded({extended : true}));
 
-app.listen(port,()=>{`Running on port: ${port}`});
+app.listen(port,()=>{console.log(`Running on port: ${port}`)});
 
 app.set("view engine", "pug");
+
 app.use(express.static('public'));
 
 
 app.get('/', (req,res) => {
-
     let score = req.session.score || 0;
     let currentQuestion = req.session.currentQuestion || 0;
     req.session.score = score;
