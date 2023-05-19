@@ -1,0 +1,25 @@
+div{
+    border: 1px solid darkblue;
+    padding: 7px;
+    display: inline-block;
+    background-color: aquamarine;
+}
+
+h1{
+    margin: 0;
+    font-weight: bold;
+}
+
+.yourAnswer{
+    display: inline;
+}
+
+input{
+    max-width: 70px;
+}
+
+.btn{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}

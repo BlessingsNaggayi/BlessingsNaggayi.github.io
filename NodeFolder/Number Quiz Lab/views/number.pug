@@ -1,0 +1,22 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title The Number Quiz
+        link(rel="stylesheet", href="number.css")
+    body
+        div
+            h1 The Number Quiz
+            if questionNumber < 6 
+                p Your current score is #{score}
+                p Guess the next number in the sequence.
+                p #{question}
+                form(action="/" method="post")
+                    label(for="answer") Your Answer:  
+                    input(type="number", name="answer" required)
+                    input.btn( type="submit")
+                p Your score: #{score}
+            else 
+                p Your current score is #{finalScore} #{score}
+                p You have completed the Number Quiz, with a score of #{score} #{finalScore} out of 5.
+                form(action="/tryAgain", method="GET")
+                    button(type="submit") Try Again
