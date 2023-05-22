@@ -2,13 +2,15 @@ body {
     background-color: rgb(248, 244, 244);
     color: rgb(7, 6, 6);
 
-
 }
 
 dl {
     color: #050505;
+    
+    
 }
 
 img {
     border-radius: 20px;
 }
+

@@ -15,11 +15,9 @@ app.get('/',(req,res) => {
 
 })
 
-
 app.post('/calculate',(req,res) => {
 
     const { num1, num2, operation } = req.body;
-
     let result;
     switch (operation) {
       case 'Add':
@@ -40,12 +38,25 @@ app.post('/calculate',(req,res) => {
     }
 
     res.send(`The Answer is: ${result}<br><a href="/">Another calculation</a>`)
- 
-
-    
+   
 });
 
 app.listen(port, () => {
     console.log(`Server is running....`);
   });
+
+
+
+//   app.post('/calculate', (req, res ) =>{
+//     const number1 = parseFloat(req.body.first);
+//     const number2 = parseFloat(req.body.second);
+//     const operation = req.body.operation;
+//     let result = calculateMod.calculate(number1,number2, operation);
+//     res.redirect(`/result?result=${result}`)
+// })
+
+// app.get('/result', (req, res) => {
+//     let result = req.query.result
+//     res.send(`The Answer is: ${result}<br><a href="/">Another calculation</a>`)
+//   })
 

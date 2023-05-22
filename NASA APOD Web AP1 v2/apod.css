@@ -1,0 +1,25 @@
+#loader{
+
+  height: 2px;
+  width: 2px;
+
+}
+
+body{
+    font-size: 30px;
+    
+   
+}
+
+section {
+    margin: 2%;
+    border: 3px solid rgb(118, 118, 123);
+    padding: 20px 20px 50px 20px;
+    width: 90%;
+    border-radius: 10px;
+    background-color: rgb(199, 194, 194);
+}
+
+input {
+    font-size: 20px;
+}
