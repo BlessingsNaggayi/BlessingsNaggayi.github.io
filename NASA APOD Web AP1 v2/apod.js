@@ -1,64 +1,42 @@
-$(document).ready(
-   
-    function () {
-
-    $('#loader').hide();
-    $(document).ajaxStart(function() { $("#loader").show(); })
-               .ajaxStop(function() { $("#loader").hide(); });    
-
-    $("#view_button").click(getPicture);
-
+$(document).ready(function () {
+  $("#loader").hide();
+  $(document)
+    .ajaxStart(function () {
+      $("#loader").show();
+    })
+    .ajaxStop(function () {
+      $("#loader").hide();
     });
 
-    const getPicture = async loadphoto => {
+  $("#view_button").click(getPicture);
+});
 
-     const photoResponse = await fetch("https://api.nasa.gov/planetary/apod");
-     
-     const photo =  await photoResponse.json();
+function getPicture() {
+  let api_key = "DEMO_KEY";
+  let date = $("#date").val();
+  const url =
+    "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=" + date;
 
+  fetch(url)
+    .then(function (response) {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error("Error:" + response.status);
+      }
+    })
 
-      const dateResponse = await fetch("https://api.nasa.gov/planetary/apod/${'#date'}");
+    .then(showPicture)
 
-      const date = await dateResponse.json();
-       
-      photo.date = date;
+    .catch(noPicture);
+}
 
+function showPicture(data) {
+  $(".titleAPOD").text(data.title).css("font-size", 24);
+  $("#pic").attr("src", data.url);
+}
 
-     return photo;
-
-    };
-
-
-    getPicture
-        .then(showPicture)
-        .catch(noPicture);
-    
-
-
-    function showPicture(data) {
-            $(".titleAPOD").text(data.title).css("font-size", 24);
-            $("#pic").attr("src", data.url);
-        
-            };
-            
-            function noPicture(error) {
-            $(".titleAPOD").text("");
-            alert(error.responseText);
-        
-            };
-
-
-
-    // $.ajax({
-
-    // url: "https://api.nasa.gov/planetary/apod",
-    // type: "GET",
-    // data: { api_key: "DEMO_KEY",
-    // date: $("#date").val() },
-    // dataType: "json",
-    // "success": showPicture,
-    // "error": noPicture
-    // });
-
-    // };
-
+function noPicture(error) {
+  $(".titleAPOD").text("");
+  alert(error.responseText);
+}
