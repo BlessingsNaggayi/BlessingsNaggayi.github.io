@@ -9,7 +9,7 @@ $(document).ready(
     $("#view_button").click(getPicture);
 
     });
-
+                                               
     function getPicture () {
 
     $.ajax({
